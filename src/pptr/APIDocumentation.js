@@ -87,7 +87,7 @@ export class APIDocumentation {
 
     // Translate all links to api.md to local links.
     for (const a of doc.querySelectorAll('a')) {
-      const match = a.href.match(/github.com\/GoogleChrome\/puppeteer\/blob\/([^/]+)\/docs\/api.md#(.*)/);
+      const match = a.href.match(/github.com\/GoogleChrome\/puppeteer\/blob\/([^/]+)\/official\/api.md#(.*)/);
       if (match)
         a.href = app.linkURL('Puppeteer', match[1], APIDocumentation._idFromGHAnchor(match[2]));
       // Mark link as external if necessary
