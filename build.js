@@ -95,6 +95,7 @@ if (os.platform() === 'win32') {
     // 5. Copy images and favicons into dist/
     await cpAsync(path.join(SRC_PATH, 'images'), path.join(DST_PATH, 'images'));
     await cpAsync(path.join(SRC_PATH, 'favicons'), path.join(DST_PATH, 'favicons'));
+    await cpAsync(path.join(SRC_PATH, 'offcial'), path.join(DST_PATH, 'offcial'));
   });
 
   await step('6. generate sw.js', async () => {
